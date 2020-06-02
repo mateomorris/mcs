@@ -1,1 +1,1 @@
-# Built with [primos](https://primo.so)
+# Built with [primo](https://primo.so)
