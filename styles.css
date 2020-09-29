@@ -1,9 +1,3 @@
-.primo-content {
-  --text-opacity: 1;
-  color: #2d3748;
-  color: rgba(45, 55, 72, var(--text-opacity));
-}
-
 body {
   --text-opacity: 1;
   color: #1a202c;
