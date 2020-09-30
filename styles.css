@@ -4,14 +4,23 @@ body {
   color: rgba(26, 32, 44, var(--text-opacity));
 }
 
+.primo-content a {
+    text-decoration: underline;
+    --text-opacity: 1;
+    color: #63b3ed;
+    color: rgba(99, 179, 237, var(--text-opacity));
+  }
+
 .primo-content h1 {
     font-size: 1.875rem;
     font-weight: 500;
+    margin-top: 1rem;
   }
 
 .primo-content h2 {
     font-size: 1.5rem;
     font-weight: 500;
+    margin-top: 1rem;
   }
 
 .primo-content ul {
@@ -21,6 +30,14 @@ body {
 
 .primo-content ul p {
       display: inline;
+    }
+
+.primo-content ol {
+    list-style-type: decimal;
+  }
+
+.primo-content ol li {
+      margin-left: 1rem;
     }
 
 .primo-content blockquote {
