@@ -4,43 +4,43 @@ body {
   color: rgba(26, 32, 44, var(--text-opacity));
 }
 
-.primo-content a {
+.primo-copy a {
     text-decoration: underline;
     --text-opacity: 1;
     color: #63b3ed;
     color: rgba(99, 179, 237, var(--text-opacity));
   }
 
-.primo-content h1 {
+.primo-copy h1 {
     font-size: 1.875rem;
     font-weight: 500;
     margin-top: 1rem;
   }
 
-.primo-content h2 {
+.primo-copy h2 {
     font-size: 1.5rem;
     font-weight: 500;
     margin-top: 1rem;
   }
 
-.primo-content ul {
+.primo-copy ul {
     list-style-type: disc;
     list-style-position: inside;
   }
 
-.primo-content ul p {
+.primo-copy ul p {
       display: inline;
     }
 
-.primo-content ol {
+.primo-copy ol {
     list-style-type: decimal;
   }
 
-.primo-content ol li {
+.primo-copy ol li {
       margin-left: 1rem;
     }
 
-.primo-content blockquote {
+.primo-copy blockquote {
     font-weight: 500;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     padding: 1.5rem;
@@ -54,7 +54,7 @@ body {
     border-radius: 0.25rem;
   }
 
-.primo-content blockquote strong {
+.primo-copy blockquote strong {
       --text-opacity: 1;
       color: #fff;
       color: rgba(255, 255, 255, var(--text-opacity));
