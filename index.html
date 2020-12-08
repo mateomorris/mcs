@@ -32,30 +32,74 @@
 				<div id="component-xm5wg" class="w-full"><header class="relative flex flex-col">
     <div class="w-full bg-green-500 font-serif">
         <div class="flex flex-wrap items-center justify-center md:justify-between text-white container mx-auto py-6 z-10 relative">
-            <a href="https://mcs-ten.now.sh/" class="mb-4 border-b border-green-400 md:border-none md:mb-0 no-underline font-bold text-2xl hover:text-gray-200">Maadi Community School</a>
-            <nav>
-                <ul class="flex justify-between md:text-xl m-0 list-none">
-                        <li class="mr-6">
-                            <a href='/about.html' class="hover:text-gray-200 no-underline font-medium">About</a>
-                        </li>
-                        <li class="mr-6">
-                            <a href='/admissions.html' class="hover:text-gray-200 no-underline font-medium">Admissions</a>
-                        </li>
-                        <li class="mr-6">
-                            <a href='/location.html' class="hover:text-gray-200 no-underline font-medium">Location</a>
-                        </li>
-                        <li class="mr-6">
-                            <a href='/employment.html' class="hover:text-gray-200 no-underline font-medium">Employment</a>
-                        </li>
-                    <li>
-                        <a href='/give.html' class="hover:bg-green-700 bg-green-600 no-underline font-medium px-3 py-2 rounded transition-colors duration-200">Give</a>
-                    </li>
-                </ul>
-            </nav>     
+            <a href="/" class="mb-4 border-b border-green-400 md:border-none md:mb-0 no-underline font-bold text-2xl hover:text-gray-200">Maadi Community School</a>
+            <div x-data="{ open: false }" class="flex justify-end items-center gap-4">
+               <div class="-mr-2 flex items-center lg:hidden">
+                  <button @click="open = !open" class="mr-4 rounded-md p-2 inline-flex items-center justify-center text-white active:text-green-900 hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" id="main-menu" aria-haspopup="true">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+                    <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden" x-show="open" x-description="Mobile menu, show/hide based on menu open state." x-transition:enter="duration-150 ease-out" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95">
+                        <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                          <div class="px-5 pt-4 flex items-center justify-between">
+                            <h1 class="text-xl text-gray-900 font-bold">Maadi Community School</h1>
+                            <div class="-mr-2">
+                              <button type="button" @click="open = false" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                <span class="sr-only">Close menu</span>
+                                <svg class="h-6 w-6" x-description="Heroicon name: x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <div role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
+                            <div class="px-2 pt-2 pb-3" role="none">
+                                    <a href='/about.html' class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50" role="menuitem">About</a>
+                                    <a href='/admissions.html' class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50" role="menuitem">Admissions</a>
+                                    <a href='/location.html' class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50" role="menuitem">Location</a>
+                                    <a href='/employment.html' class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50" role="menuitem">Employment</a>
+                                <a class="bg-green-500 my-2 px-3 py-2 flex w-full rounded transition-colors duration-200 hover:bg-green-600" href='/give.html'>Give</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="hidden lg:flex">
+                    <ul class="flex items-center z-10 md:text-lg">
+                      <li class="mr-5">
+                        <a href='/about.html'>About</a>
+                      </li>
+                      <li class="mr-5">
+                        <a href='/admissions.html'>Admissions</a>
+                      </li>
+                      <li class="mr-5">
+                        <a href='/location.html'>Location</a>
+                      </li>
+                      <li class="mr-5">
+                        <a href='/employment.html'>Employment</a>
+                      </li>
+                      <li
+                        class="flex items-center"
+                      >
+                        <a class="bg-green-600 px-3 py-1 rounded transition-colors duration-200 hover:bg-green-700" href='/give.html'>Give</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </header></div>
-				<script type="module"></script>
+				<script type="module">
+      const primo = {
+        id: 'xm5wg',
+        data: {"page-title":"Maadi Community School","page-description":"Maadi Community School provides affordable education primarily for children of expatriate development workers and other expatriate families in Cairo, through a rich and challenging internationally recognized curriculum.","nav":[{"url":"/about","id":0,"title":"About"},{"url":"/admissions","title":"Admissions","id":1},{"id":2,"title":"Location","url":"/location"},{"title":"Employment","url":"/employment","id":3}],"contact":{"phone":"+202-2358-5911","email":"admins@mceducation.org"},"id":"xm5wg"},
+        fields: [{"key":"page-title","fields":[],"id":"00000","value":"Maadi Community School","label":"Page Title","type":"text"},{"fields":[],"label":"Page Description","key":"page-description","value":"Maadi Community School provides affordable education primarily for children of expatriate development workers and other expatriate families in Cairo, through a rich and challenging internationally recognized curriculum.","type":"text","id":"11111"},{"key":"nav","label":"Navigation Links","id":"gqouv","type":"repeater","fields":[{"value":"","type":"text","id":"vaxdk","key":"title","label":"Title"},{"type":"text","label":"URL","id":"upl1s","key":"url","value":""}],"value":[{"url":"/about","id":0,"title":"About"},{"url":"/admissions","title":"Admissions","id":1},{"id":2,"title":"Location","url":"/location"},{"title":"Employment","url":"/employment","id":3}]},{"id":"bjbfo","key":"contact","label":"Contact Information","value":{"phone":"+202-2358-5911","email":"admins@mceducation.org"},"type":"group","fields":[{"id":"x15jp","key":"phone","label":"Phone Number","value":"+202-2358-5911","type":"text"},{"id":"s40i1","key":"email","label":"Email","value":"admins@mceducation.org","type":"text"}]}]
+      }
+      // turn [import _ from 'lodash'] into [import _ from 'https://cdn.skypack.dev/lodash'];
+      import AlpineJS from 'https://cdn.skypack.dev/alpinejs' 
+    </script>
 			</div>
 			<div class="primo-component" id="component-l28ly">
 				<div id="component-l28ly" class="w-full"><img src="https://firebasestorage.googleapis.com/v0/b/primo-d4041.appspot.com/o/mcs%2Findex%2Fimages%2Frwlf3?alt&#x3D;media&amp;token&#x3D;3839aaf0-1b57-4357-86ff-ea7d2e0aed0d" alt="all the students and staff" class="w-full transition-opacity duration-500 bg-green-500" onload="this.classList.add('fadein')">
